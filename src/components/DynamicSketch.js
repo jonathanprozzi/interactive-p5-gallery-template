@@ -28,7 +28,7 @@ let sketch = new p5(p => {
 */
 }
 
-class Sketch extends Component {
+class DynamicSketch extends Component {
   componentDidMount() {
     const sketchScriptElement = document.createElement("script");
 
@@ -57,4 +57,4 @@ const SketchWrapper = styled.div`
   align-items: center;
 `;
 
-export default Sketch;
+export default DynamicSketch;
