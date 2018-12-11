@@ -23,6 +23,7 @@ let sketch = new p5(p => {
     p.rect(x / 2, y / 2, 20, 20);
   };
 });
+
 */
 }
 

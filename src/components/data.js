@@ -3,14 +3,19 @@ export const sketchData = [
     title: "Test Sketch",
     content: `<h2>Canvas Element: My Sketch 1</h2>`,
     sketch: `
+    let x = 200;
+    let y = 200;
     function setup() {
-      createCanvas(200,200);
+      createCanvas(x, y).parent('p5sketch');
     }
     
     function draw() {
-      background(0);
-      fill(255,0,100);
-      rect(200,200,50,50);
+      if (mouseIsPressed) {
+        fill(0);
+      } else {
+        fill(255);
+      }
+      ellipse(mouseX, mouseY, 10, 10);
     }
     `
   },
