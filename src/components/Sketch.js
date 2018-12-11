@@ -11,7 +11,7 @@ class Sketch extends Component {
   }
   componentDidMount() {
     const processSketch = (props, element) => {
-      return element;
+      this.setState({ renderElement: element });
     };
     processSketch(this.props.sketch, "p5sketch");
     {
@@ -38,7 +38,7 @@ class Sketch extends Component {
     return (
       <div>
         <h2>{this.props.sketchTitle}</h2>
-        <div id="p5sketch" />
+        <div id={this.state.renderElement} />
       </div>
     );
   }
