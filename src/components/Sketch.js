@@ -7,11 +7,11 @@ let processSketch = (strings, ...values) => {
 };
 
 let sketch = new p5(p => {
-  const x = 100;
-  const y = 100;
+  const x = 200;
+  const y = 200;
 
   p.setup = function() {
-    p.createCanvas(x, y);
+    p.createCanvas(x, y).parent("p5sketch");
   };
 
   p.draw = function() {
@@ -32,7 +32,7 @@ class Sketch extends Component {
     return (
       <div>
         <h2>{sketchData[0].title}</h2>
-        <main dangerouslySetInnerHTML={{ __html: sketchData[0].content }} />
+        <div id="p5sketch" />
       </div>
     );
   }

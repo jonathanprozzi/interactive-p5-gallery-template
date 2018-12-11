@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Header from "./components/Header";
 import Sketch from "./components/Sketch";
+import styled from "styled-components";
 import "./App.css";
 
 class App extends Component {
@@ -8,10 +9,19 @@ class App extends Component {
     return (
       <div>
         <Header />
-        <Sketch />
+        <ContentWrapper>
+          <Sketch />
+        </ContentWrapper>
       </div>
     );
   }
 }
 
 export default App;
+
+const ContentWrapper = styled.div`
+  margin: 10vh 10vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`;
