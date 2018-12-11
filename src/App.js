@@ -10,7 +10,23 @@ class App extends Component {
       <div>
         <Header />
         <ContentWrapper>
-          <Sketch />
+          <Sketch
+            sketchTitle={"Test Sketch One"}
+            sketch={`let sketch = new p5(p => {
+            const x = 200;
+            const y = 200;
+      
+            p.setup = function() {
+              p.createCanvas(x, y).parent("p5sketch");
+            };
+      
+            p.draw = function() {
+              p.background(0);
+              p.fill(255, 0, 100);
+              p.rect(x / 2, y / 2, 20, 20);
+            };
+          });`}
+          />
         </ContentWrapper>
       </div>
     );
