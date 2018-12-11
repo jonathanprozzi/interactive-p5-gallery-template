@@ -15,20 +15,20 @@ class App extends Component {
             title={"hi"}
             sketchTitle={"Test Sketch One"}
             renderTarget={"p5sketchOne"}
-            sketch={`{
-            const x = 200;
-            const y = 200;
-      
-            p.setup = function() {
-              p.createCanvas(x, y).parent({renderTarget});
-            };
-      
-            p.draw = function() {
-              p.background(0);
-              p.fill(255, 0, 100);
-              p.rect(x / 2, y / 2, 20, 20);
-            };
-          }`}
+            sketch={`let sketch = new p5(p => {
+              const x = 200;
+              const y = 200;
+            
+              p.setup = function() {
+                p.createCanvas(x, y).parent({renderTarget});
+              };
+            
+              p.draw = function() {
+                p.background(0);
+                p.fill(255, 0, 100);
+                p.rect(x / 2, y / 2, 20, 20);
+              };
+            });`}
           />
         </ContentWrapper>
       </div>

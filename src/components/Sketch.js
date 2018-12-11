@@ -13,6 +13,7 @@ class Sketch extends Component {
     };
 
     this.sketchPropsToState = this.sketchPropsToState.bind(this);
+    this.runSketch = this.runSketch.bind(this);
   }
 
   sketchPropsToState(sketch, element, title) {
@@ -23,20 +24,24 @@ class Sketch extends Component {
     });
   }
 
+  runSketch(...values) {
+    return `${values}`;
+  }
+
   componentDidMount() {
     this.sketchPropsToState(
       this.props.sketch,
       this.props.renderTarget,
       this.props.sketchTitle
     );
-    console.log(this.props.sketch);
+    this.runSketch(this.props.sketch);
   }
 
   render() {
     return (
       <div>
         <h2>{this.state.sketchTitle}</h2>
-        {/* <div id="p5sketchOne" /> */}
+
         <div id={this.state.renderTarget} />
       </div>
     );
