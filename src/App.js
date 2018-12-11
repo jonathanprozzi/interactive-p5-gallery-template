@@ -20,7 +20,7 @@ class App extends Component {
             const y = 200;
       
             p.setup = function() {
-              p.createCanvas(x, y);
+              p.createCanvas(x, y).parent({renderTarget});
             };
       
             p.draw = function() {
