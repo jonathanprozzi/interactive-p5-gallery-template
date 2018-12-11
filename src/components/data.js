@@ -20,7 +20,27 @@ export const sketchData = [
     `
   },
   {
-    title: "Sketch Two",
+    title: "Sketch two",
+    content: `<h2>Canvas Element: My Sketch 1</h2>`,
+    sketch: `
+    let x2 = 200;
+    let y2 = 200;
+    function setup() {
+      createCanvas(x2, y2).parent('p5sketch2');
+    }
+    
+    function draw() {
+      if (mouseIsPressed) {
+        fill(255,0,100);
+      } else {
+        fill(255);
+      }
+      ellipse(mouseX, mouseY, 10, 10);
+    }
+    `
+  },
+  {
+    title: "Sketch Three",
     sketch: `
     let sketch = new p5(p => {
       const x = 200;
