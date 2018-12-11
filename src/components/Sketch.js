@@ -6,14 +6,14 @@ class Sketch extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      renderElement: null
+      renderTarget: null
     };
   }
   componentDidMount() {
     const processSketch = (props, element) => {
       this.setState({ renderElement: element });
     };
-    processSketch(this.props.sketch, "p5sketch");
+    processSketch(this.props.sketch, this.props.renderTarget);
     {
       /*
         let sketch = new p5(p => {

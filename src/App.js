@@ -12,6 +12,7 @@ class App extends Component {
         <ContentWrapper>
           <Sketch
             sketchTitle={"Test Sketch One"}
+            renderTarget={"p5sketchOne"}
             sketch={`let sketch = new p5(p => {
             const x = 200;
             const y = 200;
