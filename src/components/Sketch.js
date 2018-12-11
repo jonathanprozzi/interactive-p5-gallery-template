@@ -21,13 +21,7 @@ let sketch = new p5(p => {
   };
 });
 
-const sketchOutput = processSketch`${[sketchData[0].sketch]}`;
-
 class Sketch extends Component {
-  componentDidMount() {
-    processSketch`${[sketchData[0].sketch]}`;
-    console.log(sketchOutput);
-  }
   render() {
     return (
       <div>
