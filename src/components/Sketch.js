@@ -1,11 +1,19 @@
-import { sketchData } from "./data.js";
 import p5 from "p5";
 import styled from "styled-components";
 import React, { Component } from "react";
 
 class Sketch extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      renderElement: null
+    };
+  }
   componentDidMount() {
-    console.log(this.props.sketch);
+    const processSketch = (props, element) => {
+      return element;
+    };
+    processSketch(this.props.sketch, "p5sketch");
     {
       /*
         let sketch = new p5(p => {
